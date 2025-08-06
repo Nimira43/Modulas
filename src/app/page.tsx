@@ -1,9 +1,13 @@
+import Link from 'next/link'
+import { GiBattleGear } from 'react-icons/gi'
+
 const HomePage = () => {
   return ( 
-    <div className='p-6 bg-main-dark'>
-      <h1 className='text-4xl logo text-support'>Modulas</h1>
+    <main className='flex flex-col text-center justify-center min-h-screen px-4 bg-main-dark'>
+      <h1 className='text-4xl md:text-5xl font-medium text-support logo'>Modulas</h1>
+      <p className='text-lg text-light mb-8'>Support Ticket Management System</p>
 
-    </div>
+    </main>
    )
 }
  
