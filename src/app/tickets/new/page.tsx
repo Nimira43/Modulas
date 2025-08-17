@@ -19,13 +19,18 @@ const NewTicketPage = () => {
           />
           <select 
             className='w-full border border-grey-medium p-3 rounded focus:outline-none' 
-            name='description'
+            name='priority'
             defaultValue='Low'
           >
             <option value='Low'>Low Priority</option>
             <option value='Medium'>Medium Priority</option>
             <option value='High'>High Priority</option>
           </select>
+          <button
+            className='w-full text-light uppercase font-medium bg-main-dark hover:bg-dark btn-hover p-3 rounded'
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>
