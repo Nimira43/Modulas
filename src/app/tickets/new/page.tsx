@@ -11,6 +11,12 @@ const NewTicketPage = () => {
             placeholder='Subject'
             required 
           />
+          <textarea 
+            className='w-full border border-grey-medium p-3 rounded focus:outline-none' 
+            name='description'
+            placeholder='Describe issue'
+            required 
+          />
         </form>
       </div>
     </div>
