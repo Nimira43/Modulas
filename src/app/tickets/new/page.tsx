@@ -17,6 +17,15 @@ const NewTicketPage = () => {
             placeholder='Describe issue'
             required 
           />
+          <select 
+            className='w-full border border-grey-medium p-3 rounded focus:outline-none' 
+            name='description'
+            defaultValue='Low'
+          >
+            <option value='Low'>Low Priority</option>
+            <option value='Medium'>Medium Priority</option>
+            <option value='High'>High Priority</option>
+          </select>
         </form>
       </div>
     </div>
