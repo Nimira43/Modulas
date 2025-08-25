@@ -1,7 +1,15 @@
+'use client'
+
 import { useActionState } from 'react'
 import { createTicket } from '@/actions/ticket.actions'
 
 const NewTicketPage = () => {
+  const [state, formAction] = useActionState(createTicket, {
+    success: false,
+    message: ''
+  })
+
+
   return ( 
     <div className='min-h-screen bg-main-dark flex items-center justify-center px-4'>
       <div className='w-full max-wi-md bg-light rounded-md p-8'>
