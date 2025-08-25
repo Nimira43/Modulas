@@ -15,7 +15,7 @@ const NewTicketPage = () => {
       <div className='w-full max-wi-md bg-light rounded-md p-8'>
         <h1 className='text-3xl font-medium mb-6 text-center text-dark'>Submit A Support Ticket</h1>
         <form 
-          action={createTicket}
+          action={formAction}
           className='space-y-4 text-dark'
         >
           <input 
