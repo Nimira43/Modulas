@@ -9,7 +9,7 @@ export async function createTicket(formData: FormData) {
 
   return {
     success: true,
-    message: 'Ticket created successfully'
+    message: 'Ticket created successfully.'
   }
 }
 
