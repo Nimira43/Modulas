@@ -14,7 +14,12 @@ export async function createTicket(
   const description = formData.get('description') as string
   const priority = formData.get('priority') as string
 
-  console.log(subject, description, priority)
+  if (!subject || !description || !priority) {
+    return {
+      success: false,
+      message: 'All fields are required.'
+    }
+  }
 
   return {
     success: true,
