@@ -16,6 +16,7 @@ export async function createTicket(
   const priority = formData.get('priority') as string
 
   if (!subject || !description || !priority) {
+    Sentry.captureMessage('Validation Error: Missing ticket fields.')
     return {
       success: false,
       message: 'All fields are required.'
