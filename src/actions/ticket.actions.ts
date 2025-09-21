@@ -29,7 +29,10 @@ export async function createTicket(
       message: 'Ticket created successfully.'
     }
   } catch (error) {
-    
+    return {
+      success: false,
+      message: 'An error occurred whilst creating the ticket.'
+    }
   }
 
 
