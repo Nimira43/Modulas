@@ -42,6 +42,8 @@ export async function createTicket(
 
     Sentry.captureMessage(`Ticket was created successfully. ID: ${ticket.id}`)
 
+    revalidatePath('/tickets')
+
     return {
       success: true,
       message: 'Ticket created successfully.'
