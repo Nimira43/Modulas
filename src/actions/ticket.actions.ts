@@ -13,8 +13,7 @@ export async function createTicket(
   success: boolean,
   message: string
 }> {
-  try {
-    throw new Error('Testing - Prisma error')
+  try {  
     const subject = formData.get('subject') as string
     const description = formData.get('description') as string
     const priority = formData.get('priority') as string
