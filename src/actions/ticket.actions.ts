@@ -1,6 +1,7 @@
 'use server'
 import * as Sentry from '@sentry/nextjs'
 import { prisma } from '@/db/prisma'
+import { revalidatePath } from 'next/cache'
 
 export async function createTicket(
   prevState: {
