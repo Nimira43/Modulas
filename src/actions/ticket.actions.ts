@@ -40,6 +40,8 @@ export async function createTicket(
       level: 'info'
     })
 
+    Sentry.captureMessage(`Ticket was created successfully. ID: ${ticket.id}`)
+
     return {
       success: true,
       message: 'Ticket created successfully.'
