@@ -16,7 +16,7 @@ const NewTicketPage = () => {
         <h1 className='text-3xl font-medium mb-6 text-center text-dark'>Submit A Support Ticket</h1>
         {
           state.message && !state.success && (
-            <p className='text-red-500 mb-4 text-center'>{state.message}</p>
+            <p className='text-red-600 mb-4 text-center'>{state.message}</p>
           )
         }
         <form 

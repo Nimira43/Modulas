@@ -11,6 +11,13 @@ export async function createTicket(
   success: boolean,
   message: string
 }> {
+  try {
+    
+  } catch (error) {
+    
+  }
+
+
   const subject = formData.get('subject') as string
   const description = formData.get('description') as string
   const priority = formData.get('priority') as string
