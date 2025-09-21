@@ -12,6 +12,7 @@ export async function createTicket(
   message: string
 }> {
   try {
+    throw new Error('Testing - Prisma error')
     const subject = formData.get('subject') as string
     const description = formData.get('description') as string
     const priority = formData.get('priority') as string
@@ -23,7 +24,6 @@ export async function createTicket(
         message: 'All fields are required.'
       }
     }
-
     return {
       success: true,
       message: 'Ticket created successfully.'
