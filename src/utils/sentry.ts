@@ -15,4 +15,10 @@ export function logEvent(
     data,
     level,
   })
+
+  if (error) {
+    Sentry.captureException(error, {extra: data})
+  } else {
+    Sentry.captureMessage(message, level)
+  }
 }
