@@ -44,15 +44,7 @@ export async function createTicket(
       }
     })
 
-    Sentry.addBreadcrumb({
-      category: 'ticket',
-      message: `Ticket created. ID: ${ticket.id}`,
-      level: 'info'
-    })
-
-    Sentry.captureMessage(`Ticket was created successfully. ID: ${ticket.id}`)
-
-    revalidatePath('/tickets')
+    
 
     return {
       success: true,
