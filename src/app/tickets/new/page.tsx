@@ -1,6 +1,6 @@
 'use client'
 
-import { useActionState } from 'react'
+import { useActionState, } from 'react'
 import { createTicket } from '@/actions/ticket.actions'
 
 const NewTicketPage = () => {
