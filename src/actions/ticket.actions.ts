@@ -44,7 +44,14 @@ export async function createTicket(
       }
     })
 
-    
+    logEvent(
+      `Ticket created successfully: ${ticket.id}`,
+      'ticket', 
+      {ticketId: ticket.id},
+      'info'
+    )
+
+    revalidatePath('/tickets')
 
     return {
       success: true,
