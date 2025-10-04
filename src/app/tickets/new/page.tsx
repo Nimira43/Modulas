@@ -10,6 +10,12 @@ const NewTicketPage = () => {
     message: ''
   })
 
+  const router = useRouter()
+
+  useEffect(() => {
+    if (stat)
+  } , [state.success, router])
+
 
   return ( 
     <div className='min-h-screen bg-main-dark flex items-center justify-center px-4'>
