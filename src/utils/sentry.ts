@@ -6,6 +6,13 @@ export function logEvent(
   message: string,
   category: string = 'general',
   data?: Record<string, any>,  
-  logLevel: LogLevel = 'info',
+  level: LogLevel = 'info',
   error?: unknown
-) {}
+) {
+  Sentry.addBreadcrumb({
+    category,
+    message,
+    data,
+    level,
+  })
+}
