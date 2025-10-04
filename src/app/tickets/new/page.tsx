@@ -13,8 +13,10 @@ const NewTicketPage = () => {
   const router = useRouter()
 
   useEffect(() => {
-    if (stat)
-  } , [state.success, router])
+    if (state.success) {
+      router.push('/tickets')
+    }
+  }, [state.success, router])
 
 
   return ( 
