@@ -1,6 +1,7 @@
 'use client'
 
-import { useActionState, } from 'react'
+import { useActionState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { createTicket } from '@/actions/ticket.actions'
 
 const NewTicketPage = () => {
