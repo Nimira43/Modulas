@@ -20,11 +20,16 @@ export async function createTicket(
     const priority = formData.get('priority') as string
 
     if (!subject || !description || !priority) {
-      logEvent('Validation Error: Missing ticket fields ', 'ticket', {
-        subject, 
-        description, 
-        priority
-      })
+      logEvent(
+        'Validation Error: Missing ticket fields ',
+        'ticket', 
+        {
+          subject, 
+          description, 
+          priority
+        },
+        'warning'
+      )
       return {
         success: false,
         message: 'All fields are required.'
