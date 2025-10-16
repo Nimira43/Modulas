@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getPriorityClass } from '@/utils/ui'
 
-
 const TicketDetailsPage = () => {
   return ( 
     <div className='min-h-screen bg-main-dark p-8'>
