@@ -15,7 +15,7 @@ const TicketsPage = async () => {
           { tickets.map((ticket) => (
             <div 
               key={ticket.id}
-              className='flex justify-between item-center bg-light rounded-lg shadow p-6'
+              className='flex justify-between items-center bg-light rounded-lg shadow p-6'
             >
               <div>
                 <h2 className='text-xl font-medium text-main-dark'>{ticket.subject}</h2>
@@ -26,8 +26,11 @@ const TicketsPage = async () => {
                     {ticket.priority}
                   </span>
                 </div>
+                <div className='text-xs text-grey-dark'>
+                  Created: {new Date(ticket.createdAt).toLocaleDateString()}
+                </div>
                 <Link 
-                  href={`/tickets/{ticket.id}`}
+                  href={`/tickets/${ticket.id}`}
                   className='inline-block mt-2 bg-main-dark text-light text-sm px-2 py-1 rounded hover:bg-support btn-hover text-center uppercase font-medium'
                 >View</Link>
               </div>
