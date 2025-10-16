@@ -99,6 +99,10 @@ export async function getTicketById(id: string) {
         id: Number(id)        
       }
     })
+
+    if (!ticket) {
+      logEvent('Ticket not found', 'ticket', { ticketId: id}, 'warning')
+    }
   } catch (error) {
     
   }
