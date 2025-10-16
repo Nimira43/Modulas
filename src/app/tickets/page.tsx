@@ -26,9 +26,12 @@ const TicketsPage = async () => {
                     {ticket.priority}
                   </span>
                 </div>
+                <Link 
+                  href={`/tickets/{ticket.id}`}
+                  className='inline-block mt-2 bg-main-dark text-light text-sm px-2 py-1 rounded hover:bg-support btn-hover text-center uppercase font-medium'
+                >View</Link>
               </div>
             </div>
-
           ))}
         </div>
       )}
