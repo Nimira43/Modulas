@@ -86,7 +86,9 @@ export async function getTickets() {
 
     return tickets
   } catch (error) {
+    logEvent('Error fetching tickets', 'ticket', {}, 'error', error)
     
+    return []
   }
 }
 
