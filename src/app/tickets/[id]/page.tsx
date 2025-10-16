@@ -24,7 +24,9 @@ const TicketDetailsPage = async (props: {
         </h1>
         <div className='text-dark'>
           <h2 className='text-lg font-medium mb-2'>Description</h2>
-          <p>{ticket.description}</p>
+          <p>
+            {ticket.description}
+            </p>
         </div>
         <div className='text-dark'>
           <h2 className='text-lg font-medium mb-2'>Priority</h2>
@@ -36,6 +38,18 @@ const TicketDetailsPage = async (props: {
             {ticket.priority}
           </p>
         </div>
+        <div className='text-dark'>
+          <h2 className='text-lg font-medium mb-2'>Created At</h2>
+          <p>
+            {new Date(ticket.createdAt).toLocaleString()}
+          </p>
+        </div>
+        <Link 
+          href='/tickets'
+          className='inline-block mt-2 bg-main-dark text-light text-sm px-4 py-2 rounded hover:bg-support btn-hover text-center uppercase font-medium'
+        >
+          Back
+        </Link>
       </div>
     </div> 
   )
