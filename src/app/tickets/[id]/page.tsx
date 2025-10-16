@@ -18,7 +18,11 @@ const TicketDetailsPage = async (props: {
 
   return ( 
     <div className='min-h-screen bg-main-dark p-8'>
-      <h1>Ticket Details Page: {id}</h1>
+      <div className='max-w-2xl mx-auto bg-light rounded-lg p-8 space-y-6 shadow'>
+        <h1 className='text-3xl text-medium text-main-dark'>
+          {ticket.subject}
+        </h1>
+      </div>
     </div> 
   )
 }
