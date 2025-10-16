@@ -7,11 +7,12 @@ import { getPriorityClass } from '@/utils/ui'
 const TicketDetailsPage = async (props: {
   params: Promise<{id: string}>
 }) => {
-  
+  const { id } = await props.params
+  const ticket = await getTicketById(id)
 
   return ( 
     <div className='min-h-screen bg-main-dark p-8'>
-      <h1>Ticket Details Page</h1>
+      <h1>Ticket Details Page: {id}</h1>
     </div> 
   )
 }
