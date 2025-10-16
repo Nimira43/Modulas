@@ -73,8 +73,13 @@ export async function createTicket(
       message: 'An error occurred whilst creating the ticket.'
     }
   }
+}
 
-
-  
+export async function getTickets() {
+  try {
+    
+  } catch (error) {
+    
+  }
 }
 
