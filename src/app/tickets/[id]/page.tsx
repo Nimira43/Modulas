@@ -19,9 +19,23 @@ const TicketDetailsPage = async (props: {
   return ( 
     <div className='min-h-screen bg-main-dark p-8'>
       <div className='max-w-2xl mx-auto bg-light rounded-lg p-8 space-y-6 shadow'>
-        <h1 className='text-3xl text-medium text-main-dark'>
+        <h1 className='text-3xl font-medium text-main-dark'>
           {ticket.subject}
         </h1>
+        <div className='text-dark'>
+          <h2 className='text-lg font-medium mb-2'>Description</h2>
+          <p>{ticket.description}</p>
+        </div>
+        <div className='text-dark'>
+          <h2 className='text-lg font-medium mb-2'>Priority</h2>
+          <p 
+            className={
+              getPriorityClass(ticket.priority)
+            }
+          >
+            {ticket.priority}
+          </p>
+        </div>
       </div>
     </div> 
   )
