@@ -4,12 +4,12 @@ import Link from 'next/link'
 
 const TicketsPage = async () => {
   const tickets = await getTickets()
-  console.log(tickets)
-
+  
   return ( 
-    <>
-      Tickets Page
-    </>
+    <div className='min-h-screen bg-light p-8'>
+      <h1 className='text-3xl font-medium text-main-dark text-center mb-8'>Support Tickets</h1>
+      
+    </div>
    )
 }
  
