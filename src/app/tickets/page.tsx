@@ -17,7 +17,7 @@ const TicketsPage = async () => {
               key={ticket.id}
               className='flex justify-between item-center bg-light rounded-lg shadow p-6'
             >
-              
+              <h2 className='text-xl font-medium text-main-dark'>{ticket.subject}</h2>
             </div>
           ))}
         </div>
