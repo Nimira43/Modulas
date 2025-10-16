@@ -10,6 +10,12 @@ const TicketDetailsPage = async (props: {
   const { id } = await props.params
   const ticket = await getTicketById(id)
 
+  if (!ticket) {
+    notFound()
+  }
+
+  logEvent('Viewing ticket details', 'ticket', { ticketId: ticket.id }, 'info')
+
   return ( 
     <div className='min-h-screen bg-main-dark p-8'>
       <h1>Ticket Details Page: {id}</h1>
