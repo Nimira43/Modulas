@@ -21,7 +21,7 @@ const HomePage = () => {
           href='tickets'
           className='bg-light text-main-dark uppercase font-medium px-6 py-3 rounded hover:bg-support btn-hover'
         >
-          View Ticket
+          View Tickets
         </Link>
       </div>
     </main>
