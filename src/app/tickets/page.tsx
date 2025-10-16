@@ -2,6 +2,17 @@ import { getTickets } from '@/actions/ticket.actions'
 import { logEvent } from '@/utils/sentry'
 import Link from 'next/link'
 
+const getPriorityClass = (priority: string) => {
+  switch(priority) {
+    case 'High':
+      return 'text-red-600 font-medium' 
+    case 'Medium':
+      return 'text-amber-600 font-medium' 
+    case 'Low':
+      return 'text-green-600 font-medium' 
+  }
+}
+
 const TicketsPage = async () => {
   const tickets = await getTickets()
   
