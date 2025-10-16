@@ -82,11 +82,22 @@ export async function getTickets() {
         createdAt: 'desc'
       }
     })
-    logEvent('Fetched ticket list', 'ticket', { count: tickets.length }, 'info')
+    logEvent(
+      'Fetched ticket list', 
+      'ticket', 
+      { count: tickets.length }, 
+      'info'
+    )
 
     return tickets
   } catch (error) {
-    logEvent('Error fetching tickets', 'ticket', {}, 'error', error)
+    logEvent(
+      'Error fetching tickets', 
+      'ticket', 
+      {}, 
+      'error', 
+      error
+    )
     
     return []
   }
@@ -101,9 +112,24 @@ export async function getTicketById(id: string) {
     })
 
     if (!ticket) {
-      logEvent('Ticket not found', 'ticket', { ticketId: id}, 'warning')
+      logEvent(
+        'Ticket not found', 
+        'ticket', 
+        { ticketId: id}, 
+        'warning'
+      )
     }
+
+    return ticket
   } catch (error) {
+    logEvent(
+      'Error fetching ticket details', 
+      'ticket', 
+      { ticketId: id}, 
+      'error', 
+      error
+    )
     
+    return null
   }
 }
