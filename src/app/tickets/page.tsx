@@ -33,7 +33,10 @@ const TicketsPage = async () => {
               </div>
               <div className='text-right space-y-2'>
                 <div className='text-sm text-dark'>
-                  Priority: <span>
+                  Priority: {' '} 
+                   <span
+                    className={getPriorityClass(ticket.priority)}
+                  >
                     {ticket.priority}
                   </span>
                 </div>
