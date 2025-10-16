@@ -2,17 +2,8 @@ import { getTicketById } from '@/actions/ticket.actions'
 import { logEvent } from '@/utils/sentry'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { getPriorityClass } from '@/utils/ui'
 
-const getPriorityClass = (priority: string) => {
-  switch(priority) {
-    case 'High':
-      return 'text-red-600 font-medium' 
-    case 'Medium':
-      return 'text-amber-600 font-medium' 
-    case 'Low':
-      return 'text-green-600 font-medium' 
-  }
-}
 
 const TicketDetailsPage = () => {
   return ( 
