@@ -82,6 +82,9 @@ export async function getTickets() {
         createdAt: 'desc'
       }
     })
+    logEvent('Fetched ticket list', 'ticket', { count: tickets.length }, 'info')
+
+    return tickets
   } catch (error) {
     
   }
