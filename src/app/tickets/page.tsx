@@ -34,7 +34,7 @@ const TicketsPage = async () => {
               <div className='text-right space-y-2'>
                 <div className='text-sm text-dark'>
                   Priority: {' '} 
-                   <span
+                  <span
                     className={getPriorityClass(ticket.priority)}
                   >
                     {ticket.priority}
@@ -46,7 +46,9 @@ const TicketsPage = async () => {
                 <Link 
                   href={`/tickets/${ticket.id}`}
                   className='inline-block mt-2 bg-main-dark text-light text-sm px-2 py-1 rounded hover:bg-support btn-hover text-center uppercase font-medium'
-                >View</Link>
+                >
+                  View
+                </Link>
               </div>
             </div>
           ))}

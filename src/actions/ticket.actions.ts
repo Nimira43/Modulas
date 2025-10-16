@@ -92,3 +92,10 @@ export async function getTickets() {
   }
 }
 
+export async function getTicketById(id: string) {
+  try {
+    
+  } catch (error) {
+    
+  }
+}
