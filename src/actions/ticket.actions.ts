@@ -77,7 +77,11 @@ export async function createTicket(
 
 export async function getTickets() {
   try {
-    
+    const tickets = await prisma.ticket.findMany({
+      orderBy: {
+        createdAt: 'desc'
+      }
+    })
   } catch (error) {
     
   }
