@@ -27,7 +27,7 @@ const Navbar = () => {
           </Link>
           <Link
             href='/tickets/new'
-            className='font-medium px-4 py-2 rounded text-light bg-main hover:bg-support btn-hover '
+            className='navbar-btn btn-hover'
           >
             Logout
           </Link>
@@ -35,13 +35,13 @@ const Navbar = () => {
         <>
           <Link
             href='/login'
-            className='font-medium px-4 py-2 rounded text-light bg-main hover:bg-support btn-hover '
+            className='navbar-btn btn-hover'
           >
             Login
           </Link>
           <Link
             href='/register'
-            className='font-medium px-4 py-2 rounded text-light bg-main hover:bg-support btn-hover'
+            className='navbar-btn btn-hover'
           >
             Register
           </Link>
