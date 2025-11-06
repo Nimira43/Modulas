@@ -12,12 +12,28 @@ const Navbar = () => {
         </Link>
       </div>
       <div className='flex items-center space-x-4'>
-        <Link
-          href='/tickets/new'
-          className='text-light hover:text-support btn-hover'
-        >
-          New Ticket
-        </Link>
+        <>
+          <Link
+            href='/tickets/new'
+            className='text-light hover:text-support btn-hover'
+          >
+            New Ticket
+          </Link>
+          <Link
+            href='/tickets'
+            className='text-light hover:text-support btn-hover'
+          >
+            Live Tickets
+          </Link>
+          <Link
+            href='/tickets/new'
+            className='text-light hover:text-support btn-hover'
+          >
+            Logout
+          </Link>
+        </>
+        
+        
       </div>
     </nav>
   )
