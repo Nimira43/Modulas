@@ -45,9 +45,7 @@ const Navbar = () => {
           >
             Register
           </Link>
-        </>
-        
-        
+        </> 
       </div>
     </nav>
   )
