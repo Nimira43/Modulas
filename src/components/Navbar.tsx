@@ -1,8 +1,17 @@
+import Link from "next/link"
+
 const Navbar = () => {
   return ( 
-    <>
-      Nav
-    </>
+    <nav className='bg-dark border-b border-light px-6 py-4 flex justify-between items-center'>
+      <div>
+        <Link
+          href='/'
+          className='logo text-xl font-medium text-light'
+        >
+          Modulas
+        </Link>
+      </div>
+    </nav>
   )
 }
  
