@@ -11,25 +11,39 @@ const Navbar = () => {
           Modulas
         </Link>
       </div>
-      <div className='flex items-center space-x-4'>
+      <div className='flex items-center space-x-4 uppercase '>
         <>
           <Link
             href='/tickets/new'
-            className='text-light hover:text-support btn-hover'
+            className='font-medium text-light hover:text-support btn-hover'
           >
             New Ticket
           </Link>
           <Link
             href='/tickets'
-            className='text-light hover:text-support btn-hover'
+            className='font-medium text-light hover:text-support btn-hover'
           >
             Live Tickets
           </Link>
           <Link
             href='/tickets/new'
-            className='text-light hover:text-support btn-hover'
+            className='font-medium px-4 py-2 rounded text-light bg-main hover:bg-support btn-hover '
           >
             Logout
+          </Link>
+        </>
+        <>
+          <Link
+            href='/login'
+            className='font-medium px-4 py-2 rounded text-light bg-main hover:bg-support btn-hover '
+          >
+            Login
+          </Link>
+          <Link
+            href='/register'
+            className='font-medium px-4 py-2 rounded text-light bg-main hover:bg-support btn-hover'
+          >
+            Register
           </Link>
         </>
         
