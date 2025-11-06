@@ -12,9 +12,15 @@
   font-family: 'Grechen Fuemen', cursive;
 }
 
+.navbar-link {
+  @apply font-medium text-light hover:text-support;
+}
+
 .navbar-btn {
   @apply font-medium px-4 py-2 rounded text-light bg-main hover:bg-support;
 }
+
+
 
 .btn-hover {
   transition: all 0.5s ease-in-out;

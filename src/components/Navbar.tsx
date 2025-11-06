@@ -15,13 +15,13 @@ const Navbar = () => {
         <>
           <Link
             href='/tickets/new'
-            className='font-medium text-light hover:text-support btn-hover'
+            className='navbar-link btn-hover'
           >
             New Ticket
           </Link>
           <Link
             href='/tickets'
-            className='font-medium text-light hover:text-support btn-hover'
+            className='navbar-link btn-hover'
           >
             Live Tickets
           </Link>
