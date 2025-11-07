@@ -6,7 +6,7 @@ const Navbar = () => {
       <div>
         <Link
           href='/'
-          className='logo text-xl font-medium text-light'
+          className='logo text-xl font-medium text-support'
         >
           Modulas
         </Link>
