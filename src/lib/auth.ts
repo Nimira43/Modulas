@@ -1,2 +1,5 @@
 import { SignJWT, jwtVerify } from 'jose'
 import { cookies } from 'next/headers'
+import { logEvent } from '@/utils/sentry'
+
+const secret = new TextEncoder().encode(process.env.AUTH_SECRET)
