@@ -7,7 +7,7 @@ const cookieName = 'auth-token'
 
 export async function signAuthToken(payload: any) {
   try {
-    
+    const token = await new SignJWT(payload)
   } catch (error) {
     
   }
