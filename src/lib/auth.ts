@@ -19,4 +19,10 @@ export async function signAuthToken(payload: any) {
   }
 }
 
-export async function verifyAuthToken() {}
+export async function verifyAuthToken<T>(token: string): Promise<T> {
+  try {
+    
+  } catch (error) {
+    
+  }
+}
