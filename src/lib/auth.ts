@@ -41,3 +41,11 @@ export async function verifyAuthToken<T>(token: string): Promise<T> {
     throw new Error('Token decryption failed')   
   }
 }
+
+export async function setAuthCookie(token: string) {
+  try {
+    
+  } catch (error) {
+    
+  }
+}
