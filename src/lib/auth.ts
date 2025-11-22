@@ -66,8 +66,15 @@ export async function getAuthCookie() {
 
 export async function removeAuthCookie() {
   try {
-    
+    const cookieStore = await cookies()
+    cookieStore.delete(cookieName)
   } catch (error) {
-    
+    logEvent(
+      'Failed to remove the auth cookie', 
+      'auth', 
+      {}, 
+      'error', 
+      error
+    )
   }
 }
