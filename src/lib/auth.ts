@@ -44,6 +44,7 @@ export async function verifyAuthToken<T>(token: string): Promise<T> {
 
 export async function setAuthCookie(token: string) {
   try {
+    const cookieStore = await cookies()
     
   } catch (error) {
     
