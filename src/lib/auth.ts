@@ -56,3 +56,5 @@ export async function setAuthCookie(token: string) {
     logEvent('Failed to set cookie', 'auth', {token}, 'error', error)
   }
 }
+
+export async function getAuthCookie() {}
