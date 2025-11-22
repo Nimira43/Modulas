@@ -21,8 +21,10 @@ export async function signAuthToken(payload: any) {
 
 export async function verifyAuthToken<T>(token: string): Promise<T> {
   try {
-    
+    const { payload } = await jwtVerify(token, secret)
+
+    return payload as T
   } catch (error) {
-    
+        
   }
 }
