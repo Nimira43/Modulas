@@ -14,7 +14,13 @@ export async function signAuthToken(payload: any) {
       .sign(secret)
     return token
   } catch (error) {
-    logEvent('Token signing falied', 'auth', {payload}, 'error', error)
+    logEvent(
+      'Token signing falied', 
+      'auth', 
+      {payload}, 
+      'error', 
+      error
+    )
     throw new Error('Token signing failed')
   }
 }
@@ -25,6 +31,13 @@ export async function verifyAuthToken<T>(token: string): Promise<T> {
 
     return payload as T
   } catch (error) {
-        
+    logEvent(
+      'Token decryption failed', 
+      'auth', 
+      {tokenSnippet: token.slice(0, 10)}, 
+      'error', 
+      error
+    )
+    throw new Error('Token decryption failed')   
   }
 }
