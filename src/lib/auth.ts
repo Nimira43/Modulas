@@ -53,6 +53,6 @@ export async function setAuthCookie(token: string) {
       maxAge: 60 * 60 * 24 * 7
     })
   } catch (error) {
-    
+    logEvent('Failed to set cookie', 'auth', {token}, 'error', error)
   }
 }
