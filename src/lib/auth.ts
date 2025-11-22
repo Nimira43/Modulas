@@ -63,3 +63,11 @@ export async function getAuthCookie() {
 
   return token?.value
 }
+
+export async function removeAuthCookie() {
+  try {
+    
+  } catch (error) {
+    
+  }
+}
