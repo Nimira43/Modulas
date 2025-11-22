@@ -10,6 +10,9 @@ export async function signAuthToken(payload: any) {
     const token = await new SignJWT(payload)
       .setProtectedHeader({alg: 'HS256'})
       .setIssuedAt()
+      .setExpirationTime('7d')
+      .sign(secret)
+    return token
   } catch (error) {
     
   }
