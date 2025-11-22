@@ -14,6 +14,6 @@ export async function signAuthToken(payload: any) {
       .sign(secret)
     return token
   } catch (error) {
-    
+    logEvent('Token signing falied', 'auth', {payload}, 'error', error)
   }
 }
