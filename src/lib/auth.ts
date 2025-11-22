@@ -18,3 +18,5 @@ export async function signAuthToken(payload: any) {
     throw new Error('Token signing failed')
   }
 }
+
+export async function verifyAuthToken() {}
