@@ -5,4 +5,11 @@ import bcrypt from 'bcryptjs'
 import { logEvent } from '@/utils/sentry'
 import { signAuthToken, setAuthCookie } from '@/lib/auth'
 
-export async function registerUser() {}
+type ResponseResult = {
+  success: boolean
+  message: string
+}
+
+export async function registerUser(prevState, formData: FormData) {
+
+}
