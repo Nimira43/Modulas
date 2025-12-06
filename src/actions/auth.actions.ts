@@ -10,6 +10,10 @@ type ResponseResult = {
   message: string
 }
 
-export async function registerUser(prevState, formData: FormData) {
+export async function registerUser(
+  prevState: ResponseResult,
+  formData: FormData
+): Promise<ResponseResult> {
+  const name = formData.get('name') as string
 
 }
