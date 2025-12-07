@@ -60,6 +60,10 @@ export async function registerUser(
         password: hashedPassword
       }
     })
+
+    const token = await signAuthToken({ userId: user.id })
+    await setAuthCookie(token)
+
   } catch (error) {
 
   }  
