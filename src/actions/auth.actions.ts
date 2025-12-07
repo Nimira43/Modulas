@@ -18,4 +18,7 @@ export async function registerUser(
   const email = formData.get('email') as string
   const password = formData.get('password') as string
 
+  if (!name || !email || !password) {
+    logEvent('Validation error: Miss register fields', 'auth', { name, email}, 'warning')
+  }
 }
