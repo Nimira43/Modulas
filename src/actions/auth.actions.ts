@@ -14,11 +14,15 @@ export async function registerUser(
   prevState: ResponseResult,
   formData: FormData
 ): Promise<ResponseResult> {
-  const name = formData.get('name') as string
-  const email = formData.get('email') as string
-  const password = formData.get('password') as string
+  try {
+    const name = formData.get('name') as string
+    const email = formData.get('email') as string
+    const password = formData.get('password') as string
 
-  if (!name || !email || !password) {
-    logEvent('Validation error: Miss register fields', 'auth', { name, email}, 'warning')
-  }
+    if (!name || !email || !password) {
+      logEvent('Validation error: Miss register fields', 'auth', { name, email}, 'warning')
+    }
+  } catch (error) {
+
+  }  
 }
