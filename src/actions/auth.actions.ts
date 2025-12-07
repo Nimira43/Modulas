@@ -21,7 +21,7 @@ export async function registerUser(
 
     if (!name || !email || !password) {
       logEvent(
-        'Validation error: Miss register fields',
+        'Validation error: Miss register fields.',
         'auth',
         { name, email },
         'warning'
@@ -29,7 +29,7 @@ export async function registerUser(
 
       return {
         success: false,
-        message: 'All fields are required'
+        message: 'All fields are required.'
       }
     }
     
@@ -37,7 +37,14 @@ export async function registerUser(
       where: {email}
     })
 
-    i
+    if (existingUser) {
+      logEvent(
+        `Registration failed: User already exists - ${email}`,
+        'auth',
+        { email },
+        'warning'
+      )
+    }
   } catch (error) {
 
   }  
