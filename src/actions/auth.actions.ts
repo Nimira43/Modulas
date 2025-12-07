@@ -80,6 +80,14 @@ export async function registerUser(
     }
 
   } catch (error) {
+    logEvent(
+      'Unexpected error during registration.',
+      'auth',
+      {},
+      'error',
+      error
+    )
+
     return {
       success: false,
       message: 'Something went wrong. Please try again.'
