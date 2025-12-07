@@ -44,6 +44,11 @@ export async function registerUser(
         { email },
         'warning'
       )
+
+      return {
+        success: false,
+        message: 'User already exists'
+      }
     }
   } catch (error) {
 
