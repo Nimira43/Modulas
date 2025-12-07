@@ -78,7 +78,11 @@ export async function registerUser(
       success: true,
       message: 'Registration successful.'
     }
-  } catch (error) {
 
+  } catch (error) {
+    return {
+      success: false,
+      message: 'Something went wrong. Please try again.'
+    }
   }  
 }
