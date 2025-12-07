@@ -50,6 +50,10 @@ export async function registerUser(
         message: 'User already exists'
       }
     }
+
+    const hashedPassword = await bcrypt.hash(password, 10)
+
+    
   } catch (error) {
 
   }  
