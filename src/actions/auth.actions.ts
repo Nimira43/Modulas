@@ -20,8 +20,15 @@ export async function registerUser(
     const password = formData.get('password') as string
 
     if (!name || !email || !password) {
-      logEvent('Validation error: Miss register fields', 'auth', { name, email}, 'warning')
+      logEvent('Validation error: Miss register fields', 'auth', { name, email }, 'warning')
+
+      return {
+        success: false,
+        message: 'All fields are required'
+      }
     }
+    
+
   } catch (error) {
 
   }  
