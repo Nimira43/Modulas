@@ -14,7 +14,11 @@ const RegisterPage = () => {
   const [state, formAction] = useActionState(registerUser, initialState)
 
   return ( 
-    <div>Register Page</div>
+    <div className='min-h-screen flex items-center justify-center bg-main-dark'>
+      <div className='w-full max-w-md bg-light rounded-md p-8'>
+        
+      </div>
+    </div>
    )
 }
  
