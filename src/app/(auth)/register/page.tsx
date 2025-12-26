@@ -6,6 +6,10 @@ import { useRouter } from 'next/router'
 import { registerUser } from '@/actions/auth.actions'
 
 const RegisterPage = () => {
+  const initialState = {
+    
+  }
+
   return ( 
     <div>Register Page</div>
    )
