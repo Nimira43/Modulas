@@ -23,12 +23,13 @@ const RegisterPage = () => {
           className='space-y-4 text-dark'
         >
           <input 
-          className='w-full border border-grey-medium p-3 rounded focus:outline-none' 
-          type='text'
-          name='name'
-          placeholder='Name'
-          
-        />
+            className='w-full border border-grey-medium p-3 rounded focus:outline-none' 
+            type='text'
+            name='name'
+            placeholder='Name'
+            autoComplete='name'  
+            required
+          />
         </form>
       </div>
     </div>
