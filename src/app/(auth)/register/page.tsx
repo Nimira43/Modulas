@@ -22,7 +22,13 @@ const RegisterPage = () => {
           action={formAction}
           className='space-y-4 text-dark'
         >
+          <input 
+          className='w-full border border-grey-medium p-3 rounded focus:outline-none' 
+          type='text'
+          name='name'
+          placeholder='Name'
           
+        />
         </form>
       </div>
     </div>
