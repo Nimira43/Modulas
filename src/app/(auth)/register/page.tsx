@@ -30,6 +30,14 @@ const RegisterPage = () => {
             autoComplete='name'  
             required
           />
+          <input 
+            className='w-full border border-grey-medium p-3 rounded focus:outline-none' 
+            type='email'
+            name='email'
+            placeholder='Email'
+            autoComplete='email'  
+            required
+          />
         </form>
       </div>
     </div>
