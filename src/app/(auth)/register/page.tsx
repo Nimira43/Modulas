@@ -46,6 +46,11 @@ const RegisterPage = () => {
             autoComplete='password'  
             required
           />
+          <button
+            className='w-full text-light uppercase font-medium bg-main-dark hover:bg-support btn-hover p-3 rounded'
+          >
+            Register
+          </button>
         </form>
       </div>
     </div>
