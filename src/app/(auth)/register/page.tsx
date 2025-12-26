@@ -1,4 +1,4 @@
-import { useActionState } from 'react'
+import { useActionState, useEffect } from 'react'
 
 const RegisterPage = () => {
   return ( 
