@@ -17,6 +17,13 @@ const RegisterPage = () => {
     <div className='min-h-screen flex items-center justify-center bg-main-dark px-4'>
       <div className='w-full max-w-md bg-light rounded-md p-8'>
         <h1 className='text-3xl font-medium mb-6 text-center text-main-dark'>Register</h1>
+      
+        <form 
+          action={formAction}
+          className='space-y-4 text-dark'
+        >
+          
+        </form>
       </div>
     </div>
    )
