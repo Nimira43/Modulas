@@ -38,6 +38,14 @@ const RegisterPage = () => {
             autoComplete='email'  
             required
           />
+          <input 
+            className='w-full border border-grey-medium p-3 rounded focus:outline-none' 
+            type='password'
+            name='password'
+            placeholder='Password'
+            autoComplete='password'  
+            required
+          />
         </form>
       </div>
     </div>
