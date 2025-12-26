@@ -11,6 +11,8 @@ const RegisterPage = () => {
     message: ''
   }
 
+  const [state, formAction] = useActionState(registerUser, initialState)
+
   return ( 
     <div>Register Page</div>
    )
