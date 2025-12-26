@@ -7,7 +7,8 @@ import { registerUser } from '@/actions/auth.actions'
 
 const RegisterPage = () => {
   const initialState = {
-    
+    success: false,
+    message: ''
   }
 
   return ( 
