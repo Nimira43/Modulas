@@ -2,16 +2,27 @@
 
 import { useActionState, useEffect } from 'react'
 import { toast } from 'sonner'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { registerUser } from '@/actions/auth.actions'
 
 const RegisterPage = () => {
+  const router = useRouter()
   const initialState = {
     success: false,
     message: ''
   }
 
   const [state, formAction] = useActionState(registerUser, initialState)
+
+  useEffect(() => {
+    if (state.success) {
+      toast.success('Registration successful.')
+      router.push('/tickets')
+      router.refresh()
+    } else if (state.message){
+      toast.error(state.message)
+    }
+  }, [state, router])
 
   return ( 
     <div className='min-h-screen flex items-center justify-center bg-main-dark px-4'>
