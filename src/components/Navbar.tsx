@@ -1,6 +1,9 @@
-import Link from "next/link"
+import Link from 'next/link'
+import { getCurrentUser } from '@/lib/current-user'
 
-const Navbar = () => {
+const Navbar = async () => {
+  const user = await getCurrentUser()
+
   return ( 
     <nav className='bg-dark border-b border-light px-6 py-4 flex justify-between items-center'>
       <div>
@@ -12,40 +15,50 @@ const Navbar = () => {
         </Link>
       </div>
       <div className='flex items-center space-x-4 uppercase '>
-        <>
-          <Link
-            href='/tickets/new'
-            className='navbar-link btn-hover'
-          >
-            New Ticket
-          </Link>
-          <Link
-            href='/tickets'
-            className='navbar-link btn-hover'
-          >
-            Live Tickets
-          </Link>
-          <Link
-            href='/tickets/new'
-            className='navbar-btn btn-hover'
-          >
-            Logout
-          </Link>
-        </>
-        <>
-          <Link
-            href='/login'
-            className='navbar-btn btn-hover'
-          >
-            Login
-          </Link>
-          <Link
-            href='/register'
-            className='navbar-btn btn-hover'
-          >
-            Register
-          </Link>
-        </> 
+        {user
+          ? (
+            <>             
+              <Link
+                href='/tickets/new'
+                className='navbar-link btn-hover'
+              >
+                New Ticket
+              </Link>
+              <Link
+                href='/tickets'
+                className='navbar-link btn-hover'
+              >
+                Live Tickets
+              </Link>
+              <form>
+                <button
+                  type='submit'
+                  className='navbar-btn btn-hover'
+                >
+                  Logout
+                </button>
+              </form>
+            </>
+          )
+        
+          : (
+            <>
+              <Link
+                href='/login'
+                className='navbar-btn btn-hover'
+              >
+                Login
+              </Link>
+              <Link
+                href='/register'
+                className='navbar-btn btn-hover'
+              >
+                Register
+              </Link>
+              
+            </>
+          )
+        }
       </div>
     </nav>
   )

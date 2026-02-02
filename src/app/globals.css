@@ -17,7 +17,7 @@
 }
 
 .navbar-btn {
-  @apply font-medium px-4 py-2 rounded text-light bg-main hover:bg-support;
+  @apply font-medium px-4 py-2 rounded text-light uppercase bg-main hover:bg-support;
 }
 
 .btn-hover {
